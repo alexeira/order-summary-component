@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+  --dark-blue: #1f2f56;
+  --bright-blue: #3829e0;
+  --ligh-desatured-blue: #7965d4;
+  --desaturated-blue: #7280a7;
+  --pale-blue: #e0e8ff;
+  --very-pale-blue: #f5f7ff;
+  --white: #fff;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Red Hat Display', Arial, Helvetica, sans-serif;
+  background: #e0e8ff url(images/pattern-background-desktop.svg) no-repeat;
+  text-rendering: optimizeSpeed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  line-height: 1.6;
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: 28.2rem;
+  background-color: var(--very-pale-blue);
+  border-radius: 1.4rem;
+  box-shadow: 0 1rem 2.2rem rgba(31, 47, 86, 0.2);
+  background-color: var(--white);
+  margin-inline: 1.5rem;
+}
+
+.hero-img {
+  width: 100%;
+  border-top-left-radius: 1.4rem;
+  border-top-right-radius: 1.4rem;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 2.5rem 3rem;
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 900;
+  color: var(--dark-blue);
+  margin-block-end: 1rem;
+}
+
+.description {
+  font-size: 1em;
+  font-weight: 300;
+  text-align: center;
+  line-height: 1.65;
+  margin-block-end: 1.1rem;
+  color: var(--desaturated-blue);
+}
+
+.plan-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 7rem;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  background-color: var(--very-pale-blue);
+  margin-block-end: 2.2rem;
+}
+
+.content {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.icon-music {
+  padding: 1rem;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  min-width: max-content;
+}
+
+.plan { 
+  font-weight: 900;
+  font-size: 1rem;
+  color: var(--dark-blue);
+}
+
+.price {
+  font-size: 1rem;
+  color: var(--desaturated-blue);
+}
+
+.change {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--bright-blue);
+  padding-inline-end: 0.4rem;
+  transition: color 200ms;
+}
+
+.change:hover {
+  color: var(--ligh-desatured-blue);
+}
+
+.proceed {
+  color: var(--white);
+  background-color: var(--bright-blue);
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 0.95rem;
+  padding: 0.8rem 6.4rem;
+  border-radius: 0.8rem;
+  margin-block-end: 2rem;
+  box-shadow: 0 .5rem .5rem rgba(31, 47, 86, 0.25);
+  transition: background-color 200ms;
+}
+
+.proceed:hover {
+  background-color: var(--ligh-desatured-blue);
+}
+
+.cancel {
+  color: var(--desaturated-blue);
+  text-decoration: none;
+  margin-block-end: 0.5rem;
+  font-weight: 400;
+  font-size: 0.95rem;
+  transition: color 200ms, font-weight 200ms;
+}
+
+.cancel:hover {
+  color: var(--dark-blue);
+  font-weight: 500;
+}
+
+@media screen and (max-width: 425px) {
+  body {
+    background: #e0e8ff url(images/pattern-background-mobile.svg) no-repeat;
+  }
+  
+  .container {
+    max-width: 20.4rem;
+  }
+
+  .card {
+    margin: 1.8rem 1.7rem;
+  }
+
+  .title {
+    font-size: 1.38rem;
+    margin-block-end: 1rem;
+  }
+
+  .description {
+    font-size: 1rem;
+    font-weight: lighter;
+  }
+
+  .plan-info {
+    padding: 0.9rem 6rem;
+    width: 100%;
+    margin-block-end: 1.3rem;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .icon-music {
+    padding: 0.2rem;    
+    margin-inline-end: 0.4rem;
+  }
+
+  .plan {
+    font-size: 0.9rem;
+  }
+
+  .price {
+    font-size: 0.95rem;
+  }
+
+  .change {
+    font-size: 0.8rem;
+  }
+
+  .proceed {
+    width: 100%;
+    padding: 0.8rem 0;
+    margin-block-end: 1.4rem;
+  }
+
+  .cancel {
+    margin-block-end: 0.1rem;
+  }
+}
